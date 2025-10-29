@@ -4,62 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - ONG NutriVida</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        header, footer {
-            background-color: #f3f3f3;
-            padding: 15px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 15px;
-        }
-        form {
-            max-width: 500px;
-            margin: 0 auto;
-            background: #fafafa;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #ccc;
-        }
-        fieldset {
-            border: 1px solid #ccc;
-            margin-bottom: 15px;
-            padding: 15px;
-        }
-        legend {
-            font-weight: bold;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
 </head>
 
 <body>
@@ -74,7 +21,9 @@
         </nav>
     </header>
 
-    <main>
+    <main class="container">
+        <section class="grid-12">
+    <div class="col-span-12">
         <h2>Cadastro de Voluntário / Doador</h2>
         <p>Preencha o formulário abaixo para se cadastrar e participar das ações da ONG NutriVida.</p>
 
@@ -116,37 +65,15 @@
 
             <button type="submit">Enviar Cadastro</button>
         </form>
+        </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 ONG NutriVidaBSB</p>
     </footer>
 
-    <!-- Máscaras de input -->
-    <script>
-        // Máscara CPF
-        document.getElementById('cpf').addEventListener('input', function(e) {
-            e.target.value = e.target.value
-                .replace(/\D/g, '')
-                .replace(/(\d{3})(\d)/, '$1.$2')
-                .replace(/(\d{3})(\d)/, '$1.$2')
-                .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-        });
-
-        // Máscara telefone
-        document.getElementById('telefone').addEventListener('input', function(e) {
-            e.target.value = e.target.value
-                .replace(/\D/g, '')
-                .replace(/^(\d{2})(\d)/g, '($1) $2')
-                .replace(/(\d{5})(\d{4})$/, '$1-$2');
-        });
-
-        // Máscara CEP
-        document.getElementById('cep').addEventListener('input', function(e) {
-            e.target.value = e.target.value
-                .replace(/\D/g, '')
-                .replace(/(\d{5})(\d)/, '$1-$2');
-        });
-    </script>
+    
+    
 </body>
 </html>

@@ -4,41 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos - ONG NutriVida</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        header, footer {
-            background-color: #f3f3f3;
-            padding: 15px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 15px;
-        }
-        section {
-            margin-bottom: 30px;
-        }
-        img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-            display: block;
-            margin: 10px auto;
-        }
-        figcaption {
-            text-align: center;
-            font-style: italic;
-            color: #555;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projeto.css">
 </head>
 
 <body>
@@ -47,48 +15,49 @@
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="projeto.html">Projetos</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
         </nav>
+
     </header>
 
-    <main>
-        <section>
-            <h2>Nossos Projetos</h2>
-            <p>A ONG NutriVida realiza ações contínuas de combate à fome, distribuindo cestas básicas, alimentos frescos e produtos de higiene a famílias em situação de vulnerabilidade no Distrito Federal e entorno.</p>
-            
-            <figure>
-                <img src="img/entrega-cesta-basica.jpg" alt="Distribuição de alimentos em comunidade carente">
-                <figcaption>Distribuição de alimentos nas comunidades atendidas pela NutriVida.</figcaption>
-            </figure>
-        </section>
+    <main class="container">
+  <section class="grid-12">
+    <div class="col-span-8">
+      <h2>Nossos Projetos</h2>
+      <p>A ONG NutriVida realiza ações contínuas.</p>
 
-        <section>
-            <h2>Voluntariado</h2>
-            <p>Nosso time de voluntários é essencial para o sucesso das nossas ações. Eles ajudam na arrecadação, organização e entrega das doações. Qualquer pessoa pode participar, basta se cadastrar!</p>
-            
-            <figure>
-                <img src="img/organizacao-cesta-basica.webp" alt="Equipe de voluntários organizando cestas básicas">
-                <figcaption>Voluntários preparando as doações na sede da ONG.</figcaption>
-            </figure>
-        </section>
+      <figure>
+        <img src="img/entrega-cesta-basica.jpg" alt="Distribuição de alimentos em comunidade carente">
+        <figcaption>Distribuição de alimentos nas comunidades.</figcaption>
+      </figure>
 
-        <section>
-            <h2>Como Doar</h2>
-            <p>Você pode contribuir de várias formas:</p>
-            <ul>
-                <li>💰 Doação financeira via PIX: <strong>nutrividabsb@ong.com.br</strong></li>
-                <li>🛒 Entregando alimentos não perecíveis em nossos pontos de coleta;</li>
-                <li>📦 Participando das campanhas mensais de arrecadação.</li>
-            </ul>
-            
-            <figure>
-                <img src="img/cestabasica.jpg" alt="Cestas básicas preparadas para doação">
-                <figcaption>Cestas básicas prontas para distribuição.</figcaption>
-            </figure>
-        </section>
-    </main>
+      <h2>Voluntariado</h2>
+      <p>Nosso time de voluntários é essencial...</p>
+
+      <figure>
+        <img src="img/organizacao-cesta-basica.webp" alt="Equipe de voluntários organizando cestas básicas">
+        <figcaption>Voluntários preparando as doações.</figcaption>
+      </figure>
+
+      <h2>Como Doar</h2>
+      <ul>
+        <li>💰 Doação financeira via PIX: <strong>nutrividabsb@ong.com.br</strong></li>
+        <li>🛒 Entregando alimentos não perecíveis em nossos pontos de coleta;</li>
+        <li>📦 Participando das campanhas mensais de arrecadação.</li>
+      </ul>
+    </div>
+
+    <aside class="col-span-4">
+      <div class="card">
+        <h3>Participe!</h3>
+        <p>Seja um voluntário e ajude nossa missão.</p>
+        <a href="cadastro.html" class="btn">Cadastre-se</a>
+      </div>
+    </aside>
+  </section>
+</main>
 
     <footer>
         <p>&copy; 2025 ONG NutriVidaBSB</p>
