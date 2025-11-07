@@ -12,6 +12,19 @@
   border-radius: 8px;
 }
 
+@media (max-width: 991px) { /* Usamos max-width para pegar telas de até 991px */
+  .card {
+    /* (50% - espaçamento) */
+    flex: 1 1 calc(50% - var(--space-3)); 
+  }
+}
+
+@media (max-width: 479px) { /* Usamos max-width para pegar telas de até 479px */
+  .card {
+    /* 100% da largura, garantindo uma coluna */
+    flex: 1 1 100%; 
+  }
+}
 
 main img {
   max-width: 100%;

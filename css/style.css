@@ -137,3 +137,78 @@ figure img {
   max-height: 400px; 
   object-fit: cover; 
 }
+
+/* -------------------------------------------------------------------------- */
+/* NAVEGAÇÃO MOBILE (APENAS CSS)                                              */
+/* -------------------------------------------------------------------------- */
+
+/* Esconde o checkbox (o cérebro do menu) */
+.hidden-checkbox {
+    display: none;
+}
+
+
+.menu-mobile-toggle {
+    display: none; 
+    background: transparent;
+    border: none;
+    color: var(--color-white);
+    font-size: var(--fs-lg);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+@media (max-width: 767px) {
+    
+    header {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative; 
+    }
+
+    
+    .menu-mobile-toggle {
+        display: block; 
+    }
+
+    
+    nav {
+        display: block; 
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        max-height: 0; 
+        overflow: hidden; 
+        background: var(--color-secondary); 
+        transition: max-height 0.3s ease-out; 
+        z-index: 998;
+    }
+
+    
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--space-3) 0; 
+    }
+
+    nav a {
+        display: block; 
+        padding: var(--space-2);
+    }
+    
+    
+    #menu-toggle:checked ~ .menu-mobile-toggle {
+        
+        color: var(--color-accent); 
+    }
+
+    
+    #menu-toggle:checked ~ nav {
+        max-height: 500px; 
+    }
+}
+
