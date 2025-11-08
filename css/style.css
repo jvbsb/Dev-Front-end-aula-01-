@@ -212,3 +212,20 @@ figure img {
     }
 }
 
+/* -------------------------------------------------------------------------- */
+/* ESTILOS DE VALIDAÇÃO JS                                                    */
+/* -------------------------------------------------------------------------- */
+
+/* Estilo para a borda do campo com erro (input-error adicionado pelo JS) */
+.input-error {
+    border-color: var(--color-danger) !important; 
+    /* Adicionamos !important para garantir que substitua o :focus */
+}
+
+/* Estilo para a mensagem de erro (error-message criada pelo JS) */
+.error-message {
+    color: var(--color-danger);
+    font-size: var(--fs-xs); /* Fonte pequena */
+    margin-top: calc(var(--space-1) / 2); /* Espaçamento pequeno de 4px */
+    margin-bottom: var(--space-2);
+}

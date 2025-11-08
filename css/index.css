@@ -3,8 +3,8 @@
   background-image: url('../img/ong-banner.jpg');
   background-size: cover;
   background-position: center;
-  height: 300px;
-  border-radius: 8px;
-  margin-bottom: var(--space-3);
+  height: 0px;
+  border-radius: 8px
+  margin-bottom var(--space-3);
 }
 
