@@ -3,13 +3,14 @@
 // =================================================================
 import { setupSPALinks } from './spa.js';
 import { createProjectCard } from './templates.js';
-import { setupFormValidation } from './validation.js'; // NOVO: Importa a validação
+import { setupFormValidation } from './validation.js';
+import { setupDarkModeToggle } from './theme.js'; // Versão final com Dark Mode
 
 // -----------------------------------------------------------------
 // Lógica de Renderização de Conteúdo (Templates)
 // -----------------------------------------------------------------
 
-// Dados de exemplo (você pode transferir isso para outro arquivo de "data" no futuro)
+// Dados de exemplo para renderizar os projetos
 const projectsData = [
     {
         title: "Distribuição de Cestas",
@@ -38,30 +39,15 @@ const renderProjects = () => {
 // INICIALIZAÇÃO DA APLICAÇÃO (O Ponto de Partida)
 // =================================================================
 
-constinit = () => {
+// A função init DEVE ser única e chamar todas as funcionalidades
+const init = () => {
     console.log("Aplicação Front-End SPA e Modular Iniciada!");
     
-    // 1. ATIVA o comportamento de Single Page Application
     setupSPALinks();
-
-    // 2. Renderiza o conteúdo (usando os templates)
     renderProjects();
-
-    // 3. Configura a validação de formulário (NOVO REQUISITO)
     setupFormValidation(); 
+    setupDarkModeToggle(); 
 };
 
-// Garante que o JS só rode depois que todo o HTML for carregado
+// O Listener também deve ser único
 document.addEventListener('DOMContentLoaded', init);
-
-// EM js/main.js
-// ... outros imports ...
-import { setupFormValidation } from './validation.js'; 
-import { setupDarkModeToggle } from './theme.js'; // << ESTA LINHA DEVE SER IDÊNTICA AO NOME DA FUNÇÃO!
-
-// ...
-
-const init = () => {
-    // ... outras chamadas ...
-    setupDarkModeToggle(); // << E ESTA LINHA DEVE SER CHAMADA DENTRO DE init()
-};
