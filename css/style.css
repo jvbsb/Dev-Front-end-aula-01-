@@ -229,3 +229,47 @@ figure img {
     margin-top: calc(var(--space-1) / 2); /* Espaçamento pequeno de 4px */
     margin-bottom: var(--space-2);
 }
+
+
+
+.dark-mode {
+    
+    --color-light: #121212;  
+    --color-dark: #FFFFFF;   
+    --color-neutral: #333;   
+
+    --color-primary: #8DECB4; 
+    --color-secondary: #00ADB5; 
+    --color-accent: #FFFD8C; 
+}
+
+.dark-mode header,
+.dark-mode footer,
+.dark-mode .card {
+    background: var(--color-light); 
+    border-color: var(--color-neutral);
+    color: var(--color-dark); 
+}
+
+
+.dark-mode header a,
+.dark-mode footer a {
+    color: var(--color-primary); 
+}
+
+/* Garante que o indicador de foco é SEMPRE visível em qualquer elemento interativo */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    /* Usa a cor de destaque (accent) para alto contraste */
+    outline: 3px solid var(--color-accent); 
+    outline-offset: 2px; /* Adiciona um pequeno espaço para visibilidade */
+}
+
+/* Opcional: Garante que o foco do botão seja o mais claro */
+.btn:focus {
+    outline-color: var(--color-accent); /* Reforça a cor de foco */
+    box-shadow: 0 0 0 5px rgba(233, 196, 106, 0.4); /* Sombra suave de foco */
+}
