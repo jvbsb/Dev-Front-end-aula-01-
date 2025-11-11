@@ -38,7 +38,7 @@ const renderProjects = () => {
 // INICIALIZAÇÃO DA APLICAÇÃO (O Ponto de Partida)
 // =================================================================
 
-const init = () => {
+constinit = () => {
     console.log("Aplicação Front-End SPA e Modular Iniciada!");
     
     // 1. ATIVA o comportamento de Single Page Application
@@ -53,3 +53,15 @@ const init = () => {
 
 // Garante que o JS só rode depois que todo o HTML for carregado
 document.addEventListener('DOMContentLoaded', init);
+
+// EM js/main.js
+// ... outros imports ...
+import { setupFormValidation } from './validation.js'; 
+import { setupDarkModeToggle } from './theme.js'; // << ESTA LINHA DEVE SER IDÊNTICA AO NOME DA FUNÇÃO!
+
+// ...
+
+const init = () => {
+    // ... outras chamadas ...
+    setupDarkModeToggle(); // << E ESTA LINHA DEVE SER CHAMADA DENTRO DE init()
+};
